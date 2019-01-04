@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row" style="margin-top:50px; margin-bottom: 50px">
+  <div class="row" style="margin-top:50px; margin-bottom: 30px">
     <div class="col-sm-4"></div>
     <div class="col-sm-5 text-muted  text-left">
       <p style="font-size: 40pt; color: rgb(81, 114, 224);">
@@ -23,9 +23,15 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3"></div>
-    <agm-map [latitude]="lat" [longitude]="lng">
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <div class="col-sm-4"></div>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+      <agm-marker 
+        *ngFor="let m of markers; let i = index"
+        (markerClick)="clickedMarker(m.label, i)"
+        [latitude]="m.lat"
+        [longitude]="m.lng"
+        [label]="m.label">
+      </agm-marker>
     </agm-map>
   </div>
 </div>
