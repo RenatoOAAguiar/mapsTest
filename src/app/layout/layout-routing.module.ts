@@ -1,3 +1,4 @@
+import { MapsComponent } from './maps/maps.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
@@ -7,8 +8,9 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            //{ path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
-            //{ path: 'apiconfig', loadChildren: './apiconfig/apiconfig.module#ApiConfigModule' },
+            { path: '', redirectTo: 'principal', pathMatch: 'prefix' },
+            { path: 'maps', loadChildren: './maps/maps.module#MapsModule'},
+            //{ path: 'principal', loadChildren: './principal/principal.module#PrincipalModule' },
         ]
     }
 ];

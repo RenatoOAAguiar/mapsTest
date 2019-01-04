@@ -1,11 +1,9 @@
-import { LayoutComponent } from './layout/layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-    { path: 'teste', component: LayoutComponent},
+    { path: '', loadChildren: './layout/layout.module#LayoutModule'},
     { path: 'not-found', component: NotFoundComponent },
     { path: '**', redirectTo: 'not-found' }
 ];
