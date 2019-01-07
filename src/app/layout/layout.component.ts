@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-layout',
@@ -11,6 +12,10 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  public teste() {
+    alert("Teste");
   }
 
 }

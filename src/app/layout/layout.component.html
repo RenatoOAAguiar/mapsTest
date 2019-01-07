@@ -1,4 +1,713 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <section class="main-container">
-  <router-outlet></router-outlet>
+  <!-- PRELOADER -->
+  <div id="loading">          
+    <div id="loading-center-absolute">
+        <div class="object" id="object_one"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_three"></div>
+    </div>        
+</div>        
+<!-- /PRELOADER -->
+
+<!-- WRAPPER -->
+<main class="wrapper"> 
+    <!-- Header -->
+    <header>               
+        <section class="header-wrap upper-text white-color"> 
+            <div class="container theme-container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-7 navigation"> 
+                        <div class="logo  navbar-brand">
+                            <h2 class="logo-title secondery-font"> <a href="index.html"> <img alt="" src="assets/img/logo/logo-icon-white.png" style="width: 40px; height: 40px"> <b>iMovel</b> </a> </h2>
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navigation" >
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>                                        
+                            </div> 
+                        </div>
+                        <nav>                                                               
+                            <div class="collapse navbar-collapse no-padding" id="primary-navigation">                                        
+                                <ul class="nav navbar-nav primary-navbar">                                        
+                                    <li class="dropdown mega-dropdown active">
+                                        <a href="#"  role="button" aria-haspopup="true" >Home</a>
+                                    </li>
+                                    <li><a href="#about-us">Sobre</a></li>
+                                    <li><a href="#testimonials">Como Funciona</a></li>
+
+
+                                    <li><a href="contact-us.html">Contato</a></li>
+                                </ul>
+                            </div>    
+
+                        </nav>
+
+                    </div>
+                    <div class="col-md-3 col-sm-5 login-register text-right">
+                        <ul class="secondery-font">                                                       
+                            <li> <a href="#" class="white-color"> <b>Entrar</b> </a> </li>
+                            <li> <a href="#" class="theme-color-bg white-color"> <b>Cadastrar</b> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>            
+    </header>
+    <!-- /Header -->
+
+    <!-- CONTENT AREA -->
+
+    <!-- Main Slider Start -->
+    <section class="slider-section">   
+        <div id="main-slider" class="owl-carousel owl-theme main-slider">
+            <div class="item">  
+                <div class="carousel-inner slider">
+                    <span class="mask-overlay"></span>      
+                    <img src="assets/img/slider/main-slider-1.jpg" alt="...">                       
+                    <div class="theme-container container">
+                        <div class="caption-text style-1"> 
+                            <h5 class="slider-title-1 secondery-font"> <b> A escolha correta sob medida </b> </h5>
+                            <h2 class="extra-bold-font block-inline secondery-font">Vamos te ajudar a escolhar um lar para você e sua familia</h2>
+                            <p style="
+margin-bottom: 20px;
+">Escolha melhor opção</p>
+                            <div class="slider-btns">
+                                <a class="theme-btn btn" routerLink="/maps" [routerLinkActive]="['router-link-active']" > Anunciar </a>
+                                <a class="theme-btn btn" href="javascript:void(0);"> Buscar meu Lar </a>
+
+                            </div>
+
+                            <div class="slide-img">
+                                <img src="assets/img/slider/slide-img-1.jpg" alt="..."> 
+                            </div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>            
+    <!-- / Main Slider Ends -->   
+
+    <!-- Brand Slider Start -->
+    <section id="brand" class="space-50 light-bg">                
+        <div class="brand-slider  theme-slider">
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-1.jpg" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-2.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-3.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-4.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-5.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-6.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-7.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-1.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-2.png" alt=""> </a> </div>
+            <div class="item"> <a href="#"> <img src="assets/img/partners/partner-3.png" alt=""> </a> </div>
+        </div>
+    </section>
+    <!-- / Brand Slider Ends -->
+
+    <!-- Main Slider Mobile-Form Start -->
+    <div class="mobile-view-form visible-sm visible-xs">
+        <span class="mask-overlay"></span>
+        <div class="container theme-container relative-div">
+            <div class="text-center space-50 row">
+                <form id="registration-form-mobile" class="slider-form registration-form">
+                    <div class="form-group col-sm-12 form-alert"></div>
+                    <div class="form-group col-sm-4 col-md-3">
+                        <input type="text" class="form-control input-name" required placeholder="Your Name" value="" data-toggle="tooltip" title="Name is required">
+                    </div>
+                    <div class="form-group col-sm-4 col-md-3">
+                        <input type="text" class="form-control input-email" required placeholder="Your email" value="" data-toggle="tooltip" title="Email is required">
+                    </div>                                           
+                    <div class="form-group col-sm-4 col-md-3">
+                        <button type="submit" class="theme-btn btn submit-btn submit-button">Get 15 Days Free Trial</button>
+                    </div>                                        
+                </form>                                     
+            </div>      
+        </div>
+    </div>
+    <!-- / Main Slider Mobile-Form Start -->
+
+    <!-- Theme Features Start -->
+    <section id="theme-features" class="space-80 white-bg">
+        <div class="container theme-container">
+            <div class="title-wrap space-bottom-45">
+                <h2 class="section-title">Best Features, Best Startup</h2>
+                <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-xs-12 text-center feature-list">
+                    <div class="feature-wrap space-bottom-30">
+                        <i class="fa fa-rocket theme-color"></i>
+                        <h2 class="title-2">STARTUP FEATURE</h2>
+                        <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 text-center feature-list">
+                    <div class="feature-wrap space-bottom-30">
+                        <i class="fa fa-calculator theme-color"></i>
+                        <h2 class="title-2">CALCULATE EVERYTHING</h2>
+                        <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 text-center feature-list">
+                    <div class="feature-wrap space-bottom-30">
+                        <i class="fa fa-microphone theme-color"></i>
+                        <h2 class="title-2">CANT HEAR YOU!</h2>
+                        <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                    </div>
+                </div>                    
+            </div>
+            <div class="col-sm-12 text-center space-20">
+                <a href="#" class="theme-btn-1 btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!-- / Theme Features Ends -->
+
+    <!-- About Us Start -->
+    <section id="about-us" class="space-80 light-bg">
+        <div class="container theme-container">                   
+            <div class="title-wrap space-bottom-50">
+                <h2 class="section-title">What Do You Wanna Know</h2>
+            </div>
+
+            <div class="about-wrap">
+
+                <div class="clearfix text-center theme-tabs">
+                    <ul class="filtrable clearfix bold-font secondary-font">
+                        <li class="current"><a href="#" data-filter=".about-startup">About Startup</a></li>
+                        <li class=""><a href="#" data-filter=".main-feature" >Main Features</a></li>
+                        <li class=""><a href="#" data-filter=".success-story">Success Story</a></li>
+                    </ul>
+                </div>
+
+                <div class="row isotope isotope-items" id="about-filter">
+                    <div class="col-md-12 col-sm-12 col-xs-12 isotope-item about-startup">                                
+                        <div class="about-wrap space-20 text-center">
+                            <p class="font-18">Curabitur nec scelerisque nulla, non pharetra sapien. Praesent ac odio dolor. Pellentesque commodo erat justo, ac facilisis arcu fringilla finibus.</p>
+                            <img src="assets/img/about-us/about-1.jpg" alt=""> 
+                            <p class="space-20">In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa, tristique rutrum nisl risus at libero. Quisque id leo eu neque commodo luctus.</p>
+                            <a href="#" class="theme-btn-2 btn">Learn More</a>
+                        </div>                              
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 isotope-item main-feature">
+                        <div class="about-wrap space-20 text-center">
+                            <p class="font-18">Curabitur nec scelerisque nulla, non pharetra sapien. Praesent ac odio dolor. Pellentesque commodo erat justo, ac facilisis arcu fringilla finibus.</p>
+                            <img src="assets/img/about-us/about-1.jpg" alt=""> 
+                            <p class="space-20">In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa, tristique rutrum nisl risus at libero. Quisque id leo eu neque commodo luctus.</p>
+                            <a href="#" class="theme-btn-2 btn">Learn More</a>
+                        </div>   
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 isotope-item success-story">
+                        <div class="about-wrap space-20 text-center">
+                            <p class="font-18">Curabitur nec scelerisque nulla, non pharetra sapien. Praesent ac odio dolor. Pellentesque commodo erat justo, ac facilisis arcu fringilla finibus.</p>
+                            <img src="assets/img/about-us/about-1.jpg" alt=""> 
+                            <p class="space-20">In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa, tristique rutrum nisl risus at libero. Quisque id leo eu neque commodo luctus.</p>
+                            <a href="#" class="theme-btn-2 btn">Learn More</a>
+                        </div>   
+                    </div>
+
+                </div>
+            </div>                    
+
+        </div>
+    </section>
+    <!-- / About Us Ends -->
+
+    <!-- Created for Us Start -->
+    <section id="created-for-us" class="white-bg">  
+        <div class="row theme-intro space-100">
+            <div class="col-md-6 col-sm-6">
+                <div class="row">
+                    <div class="space-top-50 visible-lg"></div>
+                    <div class="col-md-9 col-md-offset-2 no-padding space-30">
+                        <h2 class="section-title">Created For Startups</h2>
+                        <p class="space-30">In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa, tristique rutrum nisl risus at libero. Quisque id leo eu neque commodo luctus.</p>
+                        <a href="#" class="theme-btn btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="item"> <img src="assets/img/mobile/start-up.jpg" alt="">  </div>
+            </div>     
+        </div>               
+    </section>
+    <!-- / Created for Us Ends -->
+
+
+    <!-- Stratup Ready For Devices Start -->
+    <section id="startup-ready" class="space-100 light-bg">          
+        <div class="container theme-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="startup-ready-slider space-bottom-20 theme-slider">
+                        <div class="item"> <a href="#"> <img src="assets/img/mobile/device.png" alt=""> </a> </div>
+                        <div class="item"> <a href="#"> <img src="assets/img/mobile/device.png" alt=""> </a> </div>
+                        <div class="item"> <a href="#"> <img src="assets/img/mobile/device.png" alt=""> </a> </div>                                
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hidden-xs space-top-80"></div>
+                    <div class="visible-xs space-top-30"></div>
+                    <h2 class="section-title">Im Startup is ready for all devices</h2>
+                    <div class="row">
+                        <div class="hidden-xs space-top-15"></div>
+                        <div class="devices-wrap col-sm-6 space-top-30">
+                            <i class="fa fa-rocket theme-color"></i>
+                            <h2 class="title-2">BEST STARTUP EVER!</h2>
+                            <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                        </div>
+                        <div class="devices-wrap col-sm-6 space-top-30">
+                            <i class="fa  fa-microphone theme-color"></i>
+                            <h2 class="title-2">CANT HEAR YOU!</h2>
+                            <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                        </div>
+                        <div class="devices-wrap col-sm-6 space-top-30">
+                            <i class="fa  fa-thumbs-o-up theme-color"></i>
+                            <h2 class="title-2">LOVELY FOR EVERYONE!</h2>
+                            <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                        </div>
+                        <div class="devices-wrap col-sm-6 space-top-30">
+                            <i class="fa fa-calculator theme-color"></i>
+                            <h2 class="title-2">CALCULATE EVERYTHING</h2>
+                            <p>Quisque id leo eu neque commodo luctus. Duis consequat, nunc a imperdiet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>               
+    </section>
+    <!-- / Stratup Ready For Devices Ends -->
+
+    <!-- Our Work Video Start -->
+    <!-- <section id="work-video" class="white-bg">
+        <div class="video-bg space-100">
+            <span class="mask-overlay"></span>
+            <div class="container theme-container">
+                <div class="relative-div title-wrap white-color video-wrap">
+                    <h5 class="slider-title-1 secondery-font"> <b> The best Theme Ever IM Startup Tour VIDEO </b> </h5>                            
+                    <h2 class="section-title space-top-15"> Our Sucsess Story Video</h2>
+                    <span class="space-50 block-inline">
+                        <a class="video-icon fa fa-caret-right"  data-toggle="modal"  href="#video-popup" data-iframe="https://player.vimeo.com/video/6370469?rel=0&AMP;autoplay=1"></a>
+                    </span> 
+                    <p>Curabitur nec scelerisque nulla, non pharetra sapien. Praesent ac odio dolor. Pellentesque commodo erat justo, ac facilisis arcu fringilla finibus.</p>
+                </div>
+            </div>            
+        </div>
+    </section> -->
+    <!-- / Our Work Video Ends -->
+
+    <!-- Our Costumers Start -->
+    <section id="testimonials" class="space-80 light-bg">               
+        <div class="container theme-container">
+            <div class="title-wrap space-bottom-50">                       
+                <h2 class="section-title">What Costumers Say About Us</h2>  
+                <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>                        
+            </div> 
+        </div>
+        <div class="relative-div">  
+            <div class="container theme-container">
+                <div class="row">
+                    <div class="our-costumers-slider theme-slider space-bottom-45">
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-1.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">JOHN SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-2.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">Scarlet SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-3.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">cynthia SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-4.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">Adam SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-5.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">Halley SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-2.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">Scarlet SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#"> <img src="assets/img/customers/customer-3.jpg" alt=""> </a>
+                                <p class="space-30">Quisque id leo eu neque commodo luctus. Nullam malesuada blandit imperdiet. Phasellus vehicula egestas ante, non facilisis nisl aliquet sed.</p>
+                                <a href="#" class="title-2">cynthia SNOW</a>
+                                <h5>Designer of Startup</h5>
+                            </div>                               
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="slider-navigation">                
+                <span data-slide="prev"  class="prev slider-btn">
+                    <i class="fa  fa-chevron-left"></i>
+                </span>
+                <span data-slide="next" class="next slider-btn">
+                    <i class="fa  fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- / Our Costumers Ends -->
+
+    <!-- Price Packages Start -->
+    <section id="pricing" class="space-80 white-bg">                
+        <div class="container theme-container">        
+            <div class="title-wrap space-bottom-50">
+                <h2 class="section-title">Startup Price Packages</h2>
+                <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="price-box text-center">
+                        <div class="price-heading">
+                            <h2 class="title-1 upper-text">Basic</h2>
+                            <p class="font-18"> From <b class="theme-color"> $19 </b> Per Months </p>
+                        </div>
+                        <div class="price-detail">
+                            <ul>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class=" fa fa-check theme-color"></i> All Elements </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="main-color fa fa-times"></i> LIMITLESS VARIATIONS </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="main-color fa fa-times"></i> UNTIL DIE SUPPORT </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-50">
+                            <a class="theme-btn-2 btn" href="#">buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="price-box text-center">
+                        <div class="price-heading">
+                            <div class="tag">
+                                <span class="tag-preview">  <b class="title-2 upper-text">best</b> </span>
+                            </div>
+                            <h2 class="title-1 upper-text">Premium</h2>
+                            <p class="font-18"> From <b class="theme-color"> $59 </b> Per Months </p>
+                        </div>
+                        <div class="price-detail">
+                            <ul>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class=" fa fa-check theme-color"></i> All Elements </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="theme-color fa fa-check"></i> LIMITLESS VARIATIONS </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="main-color fa fa-times"></i> UNTIL DIE SUPPORT </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-50">
+                            <a class="theme-btn-2 btn" href="#">buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="price-box text-center">
+                        <div class="price-heading">
+                            <h2 class="title-1 upper-text">Gold</h2>
+                            <p class="font-18"> From <b class="theme-color"> $99 </b> Per Months </p>
+                        </div>
+                        <div class="price-detail">
+                            <ul>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class=" fa fa-check theme-color"></i> All Elements </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="theme-color fa fa-check"></i> LIMITLESS VARIATIONS </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                                <li>
+                                    <h3 class="title-2 upper-text"> <i class="theme-color fa fa-check"></i> UNTIL DIE SUPPORT </h3>
+                                    <p>Quisque id leo eu neque commodo luctus. Duis consequat, a imperdiet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-50">
+                            <a class="theme-btn-2 btn" href="#">buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Price Packages Ends -->
+
+    <!-- Newsletter Start -->
+    <section id="subscribe" class="white-bg">
+        <div class="space-80 subscribe-bg  white-color">
+            <span class="mask-overlay"></span>
+            <div class="container theme-container relative-div">                   
+                <div class="title-wrap space-bottom-30">
+                    <h2 class="section-title">Start To Use Start Up Today</h2>  
+                    <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>
+                </div>                 
+                <div class="news-form text-center">
+                    <form id="subscribe-form" method="post" action="#" class="newsletter text-center space-20 col-sm-12 col-md-6 col-md-offset-3">
+                        <div class="form-group col-sm-12 form-alert"></div>
+                        <div class="form-group pull-left col-sm-8">                                                                         
+                            <input type="text" placeholder="your email address" name="sf_email" id="sf_email" value="" data-toggle="tooltip" title="Email is required" class="form-control input-email">
+                        </div>
+                        <div class="form-group pull-right">
+                            <button  type="submit" name="sf_submit" id="sf_submit" class="theme-btn btn submit-btn submit-button">Subscribe</button>
+                        </div>                                        
+                    </form>
+                    <p class="clearfix">Have a question? Give us a call +90-555-4433.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Newsletter Ends -->
+
+    <!-- Our Team Start -->
+    <section id="our-team" class="space-80 light-bg">               
+        <div class="container theme-container">
+            <div class="title-wrap space-bottom-50">                       
+                <h2 class="section-title">Our Awesome Team</h2>  
+                <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>                        
+            </div> 
+        </div>
+        <div class="relative-div">  
+            <div class="container theme-container">
+                <div class="row">
+                    <div class="our-team-slider theme-slider space-bottom-45">
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-1.jpg" alt=""> </a>                                        
+                                <a href="#" class="title-2">JOHN SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul>   
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-2.jpg" alt=""> </a>
+                                <a href="#" class="title-2">Scarlet SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-3.jpg" alt=""> </a>
+                                <a href="#" class="title-2">cynthia SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-4.jpg" alt=""> </a>
+                                <a href="#" class="title-2">Adam SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-5.jpg" alt=""> </a>
+                                <a href="#" class="title-2">Halley SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-2.jpg" alt=""> </a>
+                                <a href="#" class="title-2">Scarlet SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                        <div class="item space-bottom-70"> 
+                            <div class="slider-content text-center white-bg">
+                                <a href="#" class="space-bottom-30"> <img src="assets/img/our-team/team-3.jpg" alt=""> </a>
+                                <a href="#" class="title-2">cynthia SNOW</a>
+                                <h5>Designer of Startup</h5>
+                                <ul class="social-icons">   
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                                    <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="slider-navigation">                
+                <span data-slide="prev"  class="prev slider-btn">
+                    <i class="fa  fa-chevron-left"></i>
+                </span>
+                <span data-slide="next" class="next slider-btn">
+                    <i class="fa  fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- / Our Team Ends -->
+
+    <!-- Contact Us Start -->
+    <section class="space-80 white-bg"  id="contact-us">                 
+        <div class="container theme-container">
+            <div class="title-wrap space-bottom-50">
+                <h2 class="section-title">Contact Us</h2>
+                <p>Curabitur nec scelerisque nulla, non pharetra sapien. Pellentesque commodo fringilla finibus.</p>
+            </div>
+            <div class="contact-form-wrap  clearfix">
+                <form id="contact-form" class="col-md-offset-2 no-padding col-md-8 col-sm-12">
+                    <div class="form-group col-sm-12 form-alert"></div>
+                    <div class="contact-form">
+                        <div class="form-group col-sm-6 no-padding">
+                            <input type="text" class="form-control name input-your-name" placeholder="Your Name" name="cf_name" id="cf_name" value="" data-toggle="tooltip" data-placement="bottom"  title="Name is required">
+                        </div>
+                        <div class="form-group col-sm-6 no-padding">
+                            <input type="text" class="form-control email input-email" placeholder="Email Address" name="cf_email" id="cf_email" value="" data-toggle="tooltip" data-placement="bottom"  title="Email is required">
+                        </div>
+                        <div class="form-group col-sm-12 no-padding">
+                            <textarea class="form-control message input-message" rows="8" cols="10" placeholder="Your Massage" name="cf_message" id="cf_message" data-toggle="tooltip" data-placement="top"  title="Message is required"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 no-padding text-center">
+                        <button type="submit" class="theme-btn btn submit-btn submit-button">Send Now</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- / Contact Us Ends -->
+
+    <!-- / CONTENT AREA -->
+
+    <!-- FOOTER -->
+    <footer class="footer">             
+        <section class="space-70 footer-bg white-color">
+            <div class="container theme-container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2 class="logo-title secondery-font"> <a href="index.html" class="white-color"> <img src="assets/img/logo/logo-icon-white.png" style="white=60px" alt=""> <b>iMovel</b> </a> </h2>
+                    </div>
+                    <div class="col-sm-7">
+                        <ul class="social-icons">   
+                            <li> <a href="#" class="hover-color"><span class="fa fa-facebook"></span> </a> </li>
+                            <li> <a href="#" class="hover-color"><span class="fa fa-twitter"></span> </a> </li> 
+                            <li> <a href="#" class="hover-color"><span class="fa fa-behance"></span> </a> </li> 
+                            <li> <a href="#" class="hover-color"><span class="fa fa-instagram"></span> </a> </li>
+                            <li> <a href="#" class="hover-color"><span class="fa fa-globe"></span> </a> </li>
+                        </ul>                      
+                        <p class="copy-rights secondery-font">© 2015 jThemes Studio, Ltd. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- /FOOTER -->
+
+    <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+</main>
+<!-- /WRAPPER -->
+
+<!-- Popup: Video Player -->
+<div class="modal fade login-register" id="video-popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog video-frame">                 
+        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="video-link"> 
+            <iframe id="video" width="800" height="500" allowfullscreen=""> </iframe>
+        </div>
+    </div>
+</div>
+<!-- Popup: Video Player -->
+<router-outlet></router-outlet>
 </section>
