@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { MapsComponent } from './maps.component';
 import { MapsService } from './maps.service';
 import { AgmCoreModule } from '@agm/core';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
     imports: [
@@ -15,6 +16,7 @@ import { AgmCoreModule } from '@agm/core';
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBeu0Mx6eIm0nii6bZw4ZgiipYCtPwywpE'
         }),
+        SlideshowModule,
     ],
     declarations: [MapsComponent],
     providers: [

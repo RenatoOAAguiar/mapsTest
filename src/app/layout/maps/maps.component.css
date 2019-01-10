@@ -1,4 +1,32 @@
 agm-map{
-    height: 400px;
-    width: 500px;
+    height: 580px;
+    width: 100%;
+}
+
+.margin-map {
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.style-row {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+span:hover{
+    background-color: antiquewhite;
+}
+
+.badge-efect {
+    background-color: lavender; color: black; cursor: pointer;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
 }

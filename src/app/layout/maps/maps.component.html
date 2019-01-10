@@ -1,37 +1,177 @@
-<div class="container">
-  <div class="row" style="margin-top:50px; margin-bottom: 30px">
+<div>
+  <!-- <div class="row" style="margin-top:50px; margin-bottom: 30px">
     <div class="col-sm-4"></div>
     <div class="col-sm-5 text-muted  text-left">
       <p style="font-size: 40pt; color: rgb(81, 114, 224);">
         Teste de Maps
       </p>
     </div>
-  </div>
+  </div> -->
   <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="form-group">
-        <label for="cmbCoord" style="margin-top: 5px" class="col-sm-1 control-label">Local: </label>
-        <div class="col-sm-4" style="margin-bottom: 25px">
-          <select class="form-control" [(ngModel)]="local" (change)="getCoords()" [value]='' name="cmbCoord">
-              <option value="">Selecione</option>
-              <option value="cerrado">Shopping Cerrado</option>
-              <option value="areiao">Parque Areião</option>
-              <option value="serra">Estádio Serra Dourada</option>
-              <option value="office">Lourenço Office</option>
-            </select>
+    <div class="col-sm-7">
+        <div class="row style-row">
+            <!-- <div class="panel panel-primary"> 
+              <div class="panel-heading"> 
+                  <h3 class="panel-title">iMob</h3> 
+              </div> 
+              <div class="panel-body" style="height: 60px;"> -->
+                  <ol class="breadcrumb" >
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#" class="active">Imóveis</a></li>
+                      {{ms_event}}
+                  </ol>
+              <!-- </div> 
+            </div> -->
+        </div>
+        <div class="row style-row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <span class="badge badge-efect">Setor Bueno</span>
+              <span class="badge badge-efect">Cidade Jardim</span>
+              <span class="badge badge-efect">Setor Marista</span>
+              <span class="badge badge-efect">Jardim Goiás</span>
+              <span class="badge badge-efect">Alto da Glória</span>
+            </div>
+        </div>
+        <div class="row style-row" style="margin-top: 10px;overflow: scroll; height: 500px;" >
+            <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa A') " (mouseleave) ="mouseEnter('')">
+              <div class="thumbnail">
+                  <slideshow  [height]="height"
+                              [minHeight]="'200px'"
+                              [autoPlay]="false"
+                              [showArrows]="true"
+                              [imageUrls]="imageUrlArray"
+                              [lazyLoad]="imageUrlArray?.length > 1"
+                              [autoPlayWaitForLazyLoad]="true">
+                  </slideshow>
+                <div class="caption">
+                  <h5 class="text-muted" style="font-weight: bold">Venda de R$ 350.000</h5>
+                  <p>160m² - 4 quartos - 2 banhei...</p>
+                  <p class="text-muted">Avenida Mutirão - Setor Marista</p>
+                  <hr />
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal"><i class="fa fa-info"></i></button>
+                    <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa B') " (mouseleave) ="mouseEnter('')">
+                <div class="thumbnail">
+                    <slideshow  [height]="height"
+                                [minHeight]="'200px'"
+                                [autoPlay]="false"
+                                [showArrows]="true"
+                                [imageUrls]="imageUrlArray"
+                                [lazyLoad]="imageUrlArray?.length > 1"
+                                [autoPlayWaitForLazyLoad]="true">
+                    </slideshow>
+                  <div class="caption">
+                    <h5 class="text-muted" style="font-weight: bold">Venda de R$ 350.000</h5>
+                    <p>160m² - 4 quartos - 2 banhei...</p>
+                    <p class="text-muted">Avenida Mutirão - Setor Marista</p>
+                    <hr />
+                      <button class="btn btn-secondary"><i class="fa fa-info"></i></button>
+                      <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa C') " (mouseleave) ="mouseEnter('')">
+                  <div class="thumbnail">
+                      <slideshow  [height]="height"
+                                  [minHeight]="'200px'"
+                                  [autoPlay]="false"
+                                  [showArrows]="true"
+                                  [imageUrls]="imageUrlArray"
+                                  [lazyLoad]="imageUrlArray?.length > 1"
+                                  [autoPlayWaitForLazyLoad]="true">
+                      </slideshow>
+                    <div class="caption">
+                      <h5 class="text-muted" style="font-weight: bold">Venda de R$ 350.000</h5>
+                      <p>160m² - 4 quartos - 2 banhei...</p>
+                      <p class="text-muted">Avenida Mutirão - Setor Marista</p>
+                      <hr />
+                        <button class="btn btn-secondary"><i class="fa fa-info"></i></button>
+                        <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa D') " (mouseleave) ="mouseEnter('')">
+                    <div class="thumbnail">
+                        <slideshow  [height]="height"
+                                    [minHeight]="'200px'"
+                                    [autoPlay]="false"
+                                    [showArrows]="true"
+                                    [imageUrls]="imageUrlArray"
+                                    [lazyLoad]="imageUrlArray?.length > 1"
+                                    [autoPlayWaitForLazyLoad]="true">
+                        </slideshow>
+                      <div class="caption">
+                        <h5 class="text-muted" style="font-weight: bold">Venda de R$ 350.000</h5>
+                        <p>160m² - 4 quartos - 2 banhei...</p>
+                        <p class="text-muted">Avenida Mutirão - Setor Marista</p>
+                        <hr />
+                          <button class="btn btn-secondary"><i class="fa fa-info"></i></button>
+                          <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa E') " (mouseleave) ="mouseEnter('')">
+                      <div class="thumbnail">
+                          <slideshow  [height]="height"
+                                      [minHeight]="'200px'"
+                                      [autoPlay]="false"
+                                      [showArrows]="true"
+                                      [imageUrls]="imageUrlArray"
+                                      [lazyLoad]="imageUrlArray?.length > 1"
+                                      [autoPlayWaitForLazyLoad]="true">
+                          </slideshow>
+                        <div class="caption">
+                          <h5 class="text-muted" style="font-weight: bold">Venda de R$ 350.000</h5>
+                          <p>160m² - 4 quartos - 2 banhei...</p>
+                          <p class="text-muted">Avenida Mutirão - Setor Marista</p>
+                          <hr />
+                            <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal"><i class="fa fa-info"></i></button>
+                            <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
         </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"></div>
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      <agm-marker 
-        *ngFor="let m of markers; let i = index"
-        (markerClick)="clickedMarker(m.label, i)"
-        [latitude]="m.lat"
-        [longitude]="m.lng"
-        [label]="m.label">
-      </agm-marker>
-    </agm-map>
+    <div class="col-sm-5">
+      <div class="margin-map">
+        <agm-map [latitude]="lat" sty [longitude]="lng" [zoom]="zoom">
+          <agm-marker 
+            *ngFor="let m of markers; let i = index"
+            (markerClick)="clickedMarker(m.label, i)"
+            [latitude]="m.lat"
+            [longitude]="m.lng"
+            [label]="m.label">
+          </agm-marker>
+        </agm-map>
+      </div>
+    </div>
   </div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
