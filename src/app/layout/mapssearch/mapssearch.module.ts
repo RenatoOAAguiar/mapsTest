@@ -1,10 +1,10 @@
-import { MapsRoutingModule } from './maps-routing.module';
+import { MapsSearchRoutingModule } from './mapssearch-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MapsComponent } from './maps.component';
-import { MapsService } from './maps.service';
+import { MapsSearchComponent } from './mapssearch.component';
+import { MapsSearchService } from './mapssearch.service';
 import { AgmCoreModule } from '@agm/core';
 import {SlideshowModule} from 'ng-simple-slideshow';
 
@@ -12,16 +12,16 @@ import {SlideshowModule} from 'ng-simple-slideshow';
     imports: [
         CommonModule,
         FormsModule,
-        MapsRoutingModule,
+        MapsSearchRoutingModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBeu0Mx6eIm0nii6bZw4ZgiipYCtPwywpE',
             libraries: ['geometry', 'places']
         }),
         SlideshowModule,
     ],
-    declarations: [MapsComponent],
+    declarations: [MapsSearchComponent],
     providers: [
-        MapsService
+        MapsSearchService
     ]
 })
-export class MapsModule {}
+export class MapsSearchModule {}

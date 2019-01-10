@@ -1,4 +1,3 @@
-import { MapsComponent } from './maps/maps.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
@@ -10,6 +9,7 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'principal', pathMatch: 'prefix' },
             { path: 'maps', loadChildren: './maps/maps.module#MapsModule'},
+            { path: 'search', loadChildren: './mapssearch/mapssearch.module#MapsSearchModule'},
             //{ path: 'principal', loadChildren: './principal/principal.module#PrincipalModule' },
         ]
     }

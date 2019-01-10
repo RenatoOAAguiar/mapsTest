@@ -17,7 +17,8 @@
               <div class="panel-body" style="height: 60px;"> -->
                   <ol class="breadcrumb" >
                       <li><a href="#">Home</a></li>
-                      <li><a href="#" class="active">Imóveis</a></li>
+                      <li><a href="#">Imóveis</a></li>
+                      <li><a href="#" class="active">Goiânia</a></li>
                       {{ms_event}}
                   </ol>
               <!-- </div> 
@@ -148,12 +149,15 @@
             (markerClick)="clickedMarker(m.label, i)"
             [latitude]="m.lat"
             [longitude]="m.lng"
-            [label]="m.label">
+            [label]="m.label"
+            (mouseOver)="window.open()">
           </agm-marker>
         </agm-map>
       </div>
     </div>
   </div>
+
+
 </div>
 
 <div id="myModal" class="modal fade" role="dialog">

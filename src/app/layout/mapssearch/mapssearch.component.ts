@@ -4,51 +4,17 @@ import { FormControl } from '@angular/forms';
 import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 
-declare var $:any;
 @Component({
-  selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+  selector: 'app-mapssearch',
+  templateUrl: './mapssearch.component.html',
+  styleUrls: ['./mapssearch.component.css']
 })
-export class MapsComponent implements OnInit {
+export class MapsSearchComponent implements OnInit {
 
-  title: string = 'Meu primeiro projeto?';
-  lat: number = -16.6902082;
-  lng: number = -49.2759025;
   latitude: number;
   longitude: number;
-  local = '';
   public searchControl: FormControl;
   zoom: number = 13;
-  ms_event: string = '';
-  imageUrlArray = [{
-    url: '/assets/img/casa.jpg',
-    href: '/assets/img/casa.jpg'
-  }, {
-    url: '/assets/img/casa1.jpg',
-    href: '/assets/img/casa1.jpg'
-  }]
-
-  markers = [
-	  {
-		  lat: -16.6902082,
-		  lng: -49.2759025,
-		  label: 'A',
-		  draggable: true
-	  },
-	  {
-		  lat: -16.7103527,
-		  lng: -49.3127187,
-		  label: 'B',
-		  draggable: false
-	  },
-	  {
-		  lat: -16.7076654,
-		  lng: -49.2753152,
-		  label: 'C',
-		  draggable: true
-	  }
-  ]
 
   @ViewChild("search")
   public searchElementRef: ElementRef;
@@ -97,32 +63,4 @@ export class MapsComponent implements OnInit {
     }
   }
 
-  public getCoords() {
-    if( this.local == ''){
-      alert('Not to showwingg');
-    } else {
-      alert(this.local)
-    }
-  }
-
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
-
-  public mouseEnter(valor) {
-      this.ms_event = valor;
-  }
-
 }
-
-export interface IImage {
-  url: string | null;
-  href?: string;
-  clickAction?: Function;
-  caption?: string;
-  title?: string;
-  backgroundSize?: string;
-  backgroundPosition?: string;
-  backgroundRepeat?: string;
-}
-
