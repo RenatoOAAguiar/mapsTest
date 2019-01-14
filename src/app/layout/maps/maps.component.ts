@@ -1,7 +1,6 @@
 import { Component, OnInit, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 /// <reference types="@types/googlemaps" />
-import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 
 declare var $:any;
@@ -23,10 +22,10 @@ export class MapsComponent implements OnInit {
   ms_event: string = '';
   imageUrlArray = [{
     url: '/assets/img/casa.jpg',
-    href: '/assets/img/casa.jpg'
+    clickAction: this.imageView(),
   }, {
     url: '/assets/img/casa1.jpg',
-    href: '/assets/img/casa1.jpg'
+    clickAction: this.imageView(),
   }]
 
   markers = [
@@ -34,24 +33,24 @@ export class MapsComponent implements OnInit {
 		  lat: -16.6902082,
 		  lng: -49.2759025,
 		  label: 'A',
-		  draggable: true
+      draggable: true,
+      id: 1
 	  },
 	  {
 		  lat: -16.7103527,
 		  lng: -49.3127187,
 		  label: 'B',
-		  draggable: false
+      draggable: false,
+      id: 2
 	  },
 	  {
 		  lat: -16.7076654,
 		  lng: -49.2753152,
 		  label: 'C',
-		  draggable: true
+      draggable: true,
+      id: 3
 	  }
   ]
-
-  @ViewChild("search")
-  public searchElementRef: ElementRef;
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
@@ -59,42 +58,10 @@ export class MapsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.searchControl = new FormControl();
-
-    //set current position
-    this.setCurrentPosition();
-
-    this.mapsAPILoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["address"]
-      });
-      autocomplete.addListener("place_changed", () => {
-        this.ngZone.run(() => {
-          //get the place result
-          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-
-          //verify result
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          }
-
-          //set latitude, longitude and zoom
-          this.latitude = place.geometry.location.lat();
-          this.longitude = place.geometry.location.lng();
-          this.zoom = 12;
-        });
-      });
-    });
   }
 
-  private setCurrentPosition() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 12;
-      });
-    }
+  private imageView() {
+    alert("Em construção!")
   }
 
   public getCoords() {

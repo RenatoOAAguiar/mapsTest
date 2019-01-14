@@ -1,7 +1,6 @@
+/// <reference types="@types/googlemaps" />
 import { Component, OnInit, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-/// <reference types="@types/googlemaps" />
-import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
 
 @Component({

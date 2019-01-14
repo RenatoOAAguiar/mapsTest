@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="row style-row" style="margin-top: 10px;overflow: scroll; height: 500px;" >
-            <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter('casa A') " (mouseleave) ="mouseEnter('')">
+            <div class="col-sm-6 col-md-4" (mouseenter) ="mouseEnter(1) " (mouseleave) ="mouseEnter('')">
               <div class="thumbnail">
                   <slideshow  [height]="height"
                               [minHeight]="'200px'"
@@ -156,7 +156,15 @@
             [latitude]="m.lat"
             [longitude]="m.lng"
             [label]="m.label"
-            (mouseOver)="window.open()">
+            (mouseOver)="window.open()"
+            [iconUrl]="{
+              url: ms_event == m.id ? '/assets/img/greencircle.png' : '/assets/img/bluecircle.png',
+              scaledSize: {
+                  width: 40,
+                  height: 40
+              }
+          }"
+            >
           </agm-marker>
         </agm-map>
       </div>
