@@ -1,28 +1,4 @@
-import { Component, OnInit, NgZone, ViewChild, ElementRef } from '@angular/core';
-import { FormControl } from '@angular/forms';
-/// <reference types="@types/googlemaps" />
-import { MapsAPILoader } from '@agm/core';
-
-declare var $:any;
-@Component({
-  selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
-})
-export class MapsComponent implements OnInit {
-
-  title: string = 'Meu primeiro projeto?';
-  lat: number = -16.6902082;
-  lng: number = -49.2759025;
-  latitude: number;
-  longitude: number;
-  local = '';
-  public searchControl: FormControl;
-  zoom: number = 13;
-  ms_event: string = '';
-  
-
-  imoveis = [
+[
     {
       "id": 1,
       "codImovel": 5224,
@@ -33,7 +9,7 @@ export class MapsComponent implements OnInit {
         "quartos": 2,
         "andar": 5,
         "pet": true,
-        "condominio": true,
+        "condominio": true
       },
       "localizacao": {
         "logradouro": "Avenida Mutirão",
@@ -44,9 +20,9 @@ export class MapsComponent implements OnInit {
 
       },
       "imageUrlArray" : [{
-        url: '/assets/img/casa.jpg',
+        "url": "/assets/img/casa.jpg"
       }, {
-        url: '/assets/img/casa1.jpg',
+        "url": "/assets/img/casa1.jpg"
       }],
       "dadosAquisicao": [
         {
@@ -57,18 +33,10 @@ export class MapsComponent implements OnInit {
           "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
           "descricao": "A análise de crédito somente será feita após o envio."
         }
-      ],
-      "marker": 
-        {
-          lat: -16.6902082,
-          lng: -49.2759025,
-          label: 'A',
-          draggable: true,
-          id: 1
-        },
+      ]
     },
     {
-      "id": 2,
+      "id": 1,
       "codImovel": 5224,
       "valorVenda" : "225.350",
       "informacoesImovel" : {
@@ -77,7 +45,7 @@ export class MapsComponent implements OnInit {
         "quartos": 2,
         "andar": 5,
         "pet": true,
-        "condominio": true,
+        "condominio": true
       },
       "localizacao": {
         "logradouro": "Avenida Mutirão",
@@ -88,9 +56,9 @@ export class MapsComponent implements OnInit {
 
       },
       "imageUrlArray" : [{
-        url: '/assets/img/casa2.jpg',
+        "url": "/assets/img/casa.jpg"
       }, {
-        url: '/assets/img/casa3.jpg',
+        "url": "/assets/img/casa1.jpg"
       }],
       "dadosAquisicao": [
         {
@@ -101,17 +69,10 @@ export class MapsComponent implements OnInit {
           "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
           "descricao": "A análise de crédito somente será feita após o envio."
         }
-      ],
-      "marker": {
-        lat: -16.7103527,
-        lng: -49.3127187,
-        label: 'B',
-        draggable: false,
-        id: 2
-      },
+      ]
     },
     {
-      "id": 3,
+      "id": 1,
       "codImovel": 5224,
       "valorVenda" : "225.350",
       "informacoesImovel" : {
@@ -120,7 +81,7 @@ export class MapsComponent implements OnInit {
         "quartos": 2,
         "andar": 5,
         "pet": true,
-        "condominio": true,
+        "condominio": true
       },
       "localizacao": {
         "logradouro": "Avenida Mutirão",
@@ -131,9 +92,9 @@ export class MapsComponent implements OnInit {
 
       },
       "imageUrlArray" : [{
-        url: '/assets/img/casa4.jpeg',
+        "url": "/assets/img/casa.jpg"
       }, {
-        url: '/assets/img/casa5.jpg',
+        "url": "/assets/img/casa1.jpg"
       }],
       "dadosAquisicao": [
         {
@@ -144,17 +105,10 @@ export class MapsComponent implements OnInit {
           "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
           "descricao": "A análise de crédito somente será feita após o envio."
         }
-      ],
-      "marker" : {
-        lat: -16.7076654,
-        lng: -49.2753152,
-        label: 'C',
-        draggable: true,
-        id: 3
-      }
+      ]
     },
     {
-      "id": 4,
+      "id": 1,
       "codImovel": 5224,
       "valorVenda" : "225.350",
       "informacoesImovel" : {
@@ -163,7 +117,7 @@ export class MapsComponent implements OnInit {
         "quartos": 2,
         "andar": 5,
         "pet": true,
-        "condominio": true,
+        "condominio": true
       },
       "localizacao": {
         "logradouro": "Avenida Mutirão",
@@ -174,9 +128,9 @@ export class MapsComponent implements OnInit {
 
       },
       "imageUrlArray" : [{
-        url: '/assets/img/casa6.jpg',
+        "url": "/assets/img/casa.jpg"
       }, {
-        url: '/assets/img/casa7.jpg',
+        "url": "/assets/img/casa1.jpg"
       }],
       "dadosAquisicao": [
         {
@@ -187,17 +141,10 @@ export class MapsComponent implements OnInit {
           "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
           "descricao": "A análise de crédito somente será feita após o envio."
         }
-      ],
-      "marker" : {
-        lat: -16.6858119,
-        lng: -49.2853824,
-        label: 'D',
-        draggable: true,
-        id: 4
-      }
+      ]
     },
     {
-      "id": 5,
+      "id": 1,
       "codImovel": 5224,
       "valorVenda" : "225.350",
       "informacoesImovel" : {
@@ -206,7 +153,7 @@ export class MapsComponent implements OnInit {
         "quartos": 2,
         "andar": 5,
         "pet": true,
-        "condominio": true,
+        "condominio": true
       },
       "localizacao": {
         "logradouro": "Avenida Mutirão",
@@ -217,9 +164,9 @@ export class MapsComponent implements OnInit {
 
       },
       "imageUrlArray" : [{
-        url: '/assets/img/casa8.jpg',
+        "url": "/assets/img/casa.jpg"
       }, {
-        url: '/assets/img/casa9.jpg',
+        "url": "/assets/img/casa1.jpg"
       }],
       "dadosAquisicao": [
         {
@@ -230,55 +177,78 @@ export class MapsComponent implements OnInit {
           "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
           "descricao": "A análise de crédito somente será feita após o envio."
         }
-      ],
-      "marker" : {
-        lat: -16.7032361,
-        lng: -49.2740574,
-        label: 'E',
-        draggable: true,
-        id: 5
-      }
+      ]
+    },
+    {
+      "id": 1,
+      "codImovel": 5224,
+      "valorVenda" : "225.350",
+      "informacoesImovel" : {
+        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
+        "vagasCarro": 2,
+        "quartos": 2,
+        "andar": 5,
+        "pet": true,
+        "condominio": true
+      },
+      "localizacao": {
+        "logradouro": "Avenida Mutirão",
+        "numero": null,
+        "setor": "Setor Marista"
+      },
+      "condominio" : {
+
+      },
+      "imageUrlArray" : [{
+        "url": "/assets/img/casa.jpg"
+      }, {
+        "url": "/assets/img/casa1.jpg"
+      }],
+      "dadosAquisicao": [
+        {
+          "titulo": "Não possuir antecedentes criminais.",
+          "descricao": "O comprador não pode possuir antecedentes criminais."
+        },
+        {
+          "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
+          "descricao": "A análise de crédito somente será feita após o envio."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "codImovel": 5224,
+      "valorVenda" : "225.350",
+      "informacoesImovel" : {
+        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
+        "vagasCarro": 2,
+        "quartos": 2,
+        "andar": 5,
+        "pet": true,
+        "condominio": true
+      },
+      "localizacao": {
+        "logradouro": "Avenida Mutirão",
+        "numero": null,
+        "setor": "Setor Marista"
+      },
+      "condominio" : {
+
+      },
+      "imageUrlArray" : [{
+        "url": "/assets/img/casa.jpg"
+      }, {
+        "url": "/assets/img/casa1.jpg"
+      }],
+      "dadosAquisicao": [
+        {
+          "titulo": "Não possuir antecedentes criminais.",
+          "descricao": "O comprador não pode possuir antecedentes criminais."
+        },
+        {
+          "titulo": "Enviar dados em forma digital, para que possa feita a análise e crédito.",
+          "descricao": "A análise de crédito somente será feita após o envio."
+        }
+      ]
     }
-  ];
-
-  constructor(
-    private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
-  ) { }
-
-  ngOnInit() {
-  }
-
-  private imageView() {
-    alert("Em construção!")
-  }
-
-  public getCoords() {
-    if( this.local == ''){
-      alert('Not to showwingg');
-    } else {
-      alert(this.local)
-    }
-  }
-
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
-
-  public mouseEnter(valor) {
-      this.ms_event = valor;
-  }
-
-}
-
-export interface IImage {
-  url: string | null;
-  href?: string;
-  clickAction?: Function;
-  caption?: string;
-  title?: string;
-  backgroundSize?: string;
-  backgroundPosition?: string;
-  backgroundRepeat?: string;
-}
-
+]
