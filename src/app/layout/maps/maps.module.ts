@@ -7,6 +7,7 @@ import { MapsComponent } from './maps.component';
 import { MapsService } from './maps.service';
 import { AgmCoreModule } from '@agm/core';
 import {SlideshowModule} from 'ng-simple-slideshow';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
     imports: [
@@ -19,7 +20,7 @@ import {SlideshowModule} from 'ng-simple-slideshow';
         }),
         SlideshowModule,
     ],
-    declarations: [MapsComponent],
+    declarations: [MapsComponent, FormComponent],
     providers: [
         MapsService
     ]

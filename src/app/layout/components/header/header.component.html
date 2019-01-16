@@ -1,7 +1,14 @@
-<a routerLink="/maps" [routerLinkActive]="['router-link-active']" class="list-group-item">
+<!-- <a routerLink="/maps" [routerLinkActive]="['router-link-active']" class="list-group-item">
   <span>Maps</span>
 </a>
 
 <a routerLink="/search" [routerLinkActive]="['router-link-active']" class="list-group-item">
   <span>Maps Search</span>
-</a>
+</a> -->
+
+<nav class="navbar navbar-default navbar-fixed-header">
+    <ul class="nav navbar-nav">
+        <li><a routerLink="/maps" [routerLinkActive]="['router-link-active']" >Maps</a></li>
+        <li><a routerLink="/search" [routerLinkActive]="['router-link-active']" >Maps Search</a></li>
+    </ul>
+</nav>
