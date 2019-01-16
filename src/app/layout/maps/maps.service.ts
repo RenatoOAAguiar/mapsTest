@@ -4,4 +4,14 @@ import { Injectable } from '@angular/core';
 export class MapsService {
 
   constructor() { }
+
+  public obj: any;
+
+  public setObj(obj){
+    this.obj = obj;
+  }
+
+  public getObj(){
+    return this.obj;
+  }
 }

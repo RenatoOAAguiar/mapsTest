@@ -1,3 +1,41 @@
 <div class="container">
-    <h1 class="text-muted">CONTENT</h1>
+    <h1 class="text-muted">Dados do Imóvel</h1>
+    <div class="row spaceTop">
+        <div class="form-group">
+            <div class="col-sm-6">
+                    <div class="col-sm-2">
+                        <label for="id" style="margin-top: 5px">Id: </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <span id="id" class="form-control" name="id">{{imovel.id}}</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row spaceTop">
+        <div class="form-group">
+                <div class="col-sm-6">
+                        <div class="col-sm-2">
+                            <label for="cod" style="margin-top: 5px">Código: </label>
+                        </div>
+                        <div class="col-sm-9">
+                            <span id="cod" class="form-control" name="cod">{{imovel.codImovel}}</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="row spaceTop">
+            <div class="form-group">
+                    <div class="col-sm-6">
+                            <div class="col-sm-2">
+                                <label for="cod" style="margin-top: 5px">Descrição: </label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span id="cod" class="form-control" style="height: 100%" name="cod">{{imovel.informacoesImovel.descricao}}</span>
+                            </div>
+                    </div>
+                </div>
+        </div>
 </div>

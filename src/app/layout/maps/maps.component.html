@@ -48,10 +48,11 @@
                           </slideshow>
                         <div class="caption">
                           <h5 class="text-muted" style="font-weight: bold">Venda de R$ {{m.valorVenda}}</h5>
-                          <p>{{m.informacoesImovel.descricao | slice:0:10}}</p>
+                          <p>{{m.informacoesImovel.descricao | slice:0:25}} ...</p>
                           <p class="text-muted">{{m.localizacao.logradouro}} - {{m.localizacao.setor}}</p>
                           <hr />
-                            <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal"><i class="fa fa-info"></i></button>
+                            <!-- <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal"><i class="fa fa-info"></i></button> -->
+                            <button class="btn btn-secondary" (click)="openDetail(m)"><i class="fa fa-info"></i></button>
                             <button class="btn btn-danger pull-right"><i class="fa fa-trash"></i></button>
                         </div>
                       </div>

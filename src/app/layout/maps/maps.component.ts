@@ -1,6 +1,8 @@
-import { Component, OnInit, NgZone, ViewChild, ElementRef } from '@angular/core';
-import { FormControl } from '@angular/forms';
 /// <reference types="@types/googlemaps" />
+import { MapsService } from './maps.service';
+import { Component, OnInit, NgZone} from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
 import { MapsAPILoader } from '@agm/core';
 
 declare var $:any;
@@ -29,8 +31,8 @@ export class MapsComponent implements OnInit {
       "valorVenda" : "225.350",
       "informacoesImovel" : {
         "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
-        "vagasCarro": 2,
-        "quartos": 2,
+        "vagasCarro": 3,
+        "quartos": 3,
         "andar": 5,
         "pet": true,
         "condominio": true,
@@ -69,20 +71,20 @@ export class MapsComponent implements OnInit {
     },
     {
       "id": 2,
-      "codImovel": 5224,
-      "valorVenda" : "225.350",
+      "codImovel": 753,
+      "valorVenda" : "470.00",
       "informacoesImovel" : {
-        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
-        "vagasCarro": 2,
+        "descricao": "Apartamento com bela vista da cidade.",
+        "vagasCarro": 1,
         "quartos": 2,
-        "andar": 5,
-        "pet": true,
+        "andar": 14,
+        "pet": false,
         "condominio": true,
       },
       "localizacao": {
-        "logradouro": "Avenida Mutirão",
-        "numero": null,
-        "setor": "Setor Marista"
+        "logradouro": "Rua Abacate",
+        "numero": 5632,
+        "setor": "Setor Bueno"
       },
       "condominio" : {
 
@@ -112,20 +114,20 @@ export class MapsComponent implements OnInit {
     },
     {
       "id": 3,
-      "codImovel": 5224,
-      "valorVenda" : "225.350",
+      "codImovel": 1254,
+      "valorVenda" : "500.100",
       "informacoesImovel" : {
-        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
-        "vagasCarro": 2,
-        "quartos": 2,
-        "andar": 5,
+        "descricao": "É um imóvel recem construído, então está em perfeitas condições.",
+        "vagasCarro": 3,
+        "quartos": 3,
+        "andar": -1,
         "pet": true,
-        "condominio": true,
+        "condominio": false,
       },
       "localizacao": {
-        "logradouro": "Avenida Mutirão",
+        "logradouro": "Avenida D",
         "numero": null,
-        "setor": "Setor Marista"
+        "setor": "Setor Oeste"
       },
       "condominio" : {
 
@@ -155,20 +157,20 @@ export class MapsComponent implements OnInit {
     },
     {
       "id": 4,
-      "codImovel": 5224,
-      "valorVenda" : "225.350",
+      "codImovel": 364,
+      "valorVenda" : "300.000",
       "informacoesImovel" : {
-        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
-        "vagasCarro": 2,
+        "descricao": "Imóvel bem localizado, próximo ao vaca brava.",
+        "vagasCarro": 1,
         "quartos": 2,
-        "andar": 5,
+        "andar": 6,
         "pet": true,
         "condominio": true,
       },
       "localizacao": {
-        "logradouro": "Avenida Mutirão",
+        "logradouro": "Avenida T-10",
         "numero": null,
-        "setor": "Setor Marista"
+        "setor": "Setor Bueno"
       },
       "condominio" : {
 
@@ -198,20 +200,20 @@ export class MapsComponent implements OnInit {
     },
     {
       "id": 5,
-      "codImovel": 5224,
-      "valorVenda" : "225.350",
+      "codImovel": 1234,
+      "valorVenda" : "650.000",
       "informacoesImovel" : {
-        "descricao": "Imóvel bem localizado, prédio recentemente construído, com ótima vista e vizinhança.",
-        "vagasCarro": 2,
-        "quartos": 2,
-        "andar": 5,
-        "pet": true,
+        "descricao": "Prédio com arquitetura moderna, e com excelente serviços de condominio.",
+        "vagasCarro": 1,
+        "quartos": 3,
+        "andar": 7,
+        "pet": false,
         "condominio": true,
       },
       "localizacao": {
-        "logradouro": "Avenida Mutirão",
+        "logradouro": "Avenida T-7",
         "numero": null,
-        "setor": "Setor Marista"
+        "setor": "Setor Bueno"
       },
       "condominio" : {
 
@@ -243,7 +245,9 @@ export class MapsComponent implements OnInit {
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private router: Router,
+    private _mapsService: MapsService
   ) { }
 
   ngOnInit() {
@@ -267,6 +271,11 @@ export class MapsComponent implements OnInit {
 
   public mouseEnter(valor) {
       this.ms_event = valor;
+  }
+
+  public openDetail(imovel) {
+    this._mapsService.setObj(imovel);
+    this.router.navigate(['/maps/form']);
   }
 
 }

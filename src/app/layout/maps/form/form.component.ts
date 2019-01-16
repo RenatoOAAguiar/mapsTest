@@ -1,4 +1,6 @@
+import { MapsService } from './../maps.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  public imovel: any;
+
+  constructor(
+    private _mapsService: MapsService,
+    private router: Router,
+  ) { }
+
+  
 
   ngOnInit() {
+      this.imovel = this._mapsService.getObj();
+      if(this.imovel == undefined){
+        this.router.navigate(['/maps']);
+      }
   }
 
 }
