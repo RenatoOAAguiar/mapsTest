@@ -22,6 +22,8 @@ export class MapsComponent implements OnInit {
   public searchControl: FormControl;
   zoom: number = 13;
   ms_event: string = '';
+  lastWindow: any;
+  filteredImoveis: any;
   
 
   imoveis = [
@@ -251,6 +253,7 @@ export class MapsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.filteredImoveis = this.imoveis;
   }
 
   private imageView() {
@@ -278,7 +281,40 @@ export class MapsComponent implements OnInit {
     this.router.navigate(['/maps/form']);
   }
 
+ public onMouseOver(infoWindow, gm) {
+
+    if(this.lastWindow != undefined){
+      this.lastWindow.close();
+    }
+
+    if (gm.lastOpen && gm.lastOpen.isOpen) {
+      gm.lastOpen.close();
+    }
+  
+    gm.lastOpen = infoWindow;
+  
+    infoWindow.open();
+    this.lastWindow = infoWindow;
+  }
+
+  public checkMarkersInBounds(bounds) {
+    
+    this.filteredImoveis = [];
+
+    for(let imovel of this.imoveis){
+
+      let position = {lat: imovel.marker.lat, lng: imovel.marker.lng};
+
+      if (bounds.contains(position)){
+        this.filteredImoveis.push(imovel);
+      }
+
+      console.log(this.filteredImoveis);
+    }
+  }
+
 }
+
 
 export interface IImage {
   url: string | null;

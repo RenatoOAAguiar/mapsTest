@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="row style-row" style="margin-top: 10px;overflow: scroll; height: 500px;" >
-                  <div class="col-sm-6 col-md-4" *ngFor="let m of imoveis; let i = index" (mouseenter) ="mouseEnter(m.id) " (mouseleave) ="mouseEnter('')">
+                  <div class="col-sm-6 col-md-4" *ngFor="let m of filteredImoveis; let i = index" (mouseenter) ="mouseEnter(m.id) " (mouseleave) ="mouseEnter('')">
                       <div class="thumbnail">
                           <slideshow  [height]="height"
                                       [minHeight]="'200px'"
@@ -61,14 +61,19 @@
     </div>
     <div class="col-sm-5">
       <div class="margin-map">
-        <agm-map [latitude]="lat" sty [longitude]="lng" [zoom]="zoom">
+        <agm-map 
+                  [latitude]="lat" 
+                  #gm sty 
+                  [longitude]="lng" 
+                  [zoom]="zoom"
+                  (boundsChange)="checkMarkersInBounds($event)">
           <agm-marker 
             *ngFor="let m of imoveis; let i = index"
             (markerClick)="clickedMarker(m.label, i)"
             [latitude]="m.marker.lat"
             [longitude]="m.marker.lng"
             [label]="m.marker.label"
-            (mouseOver)="window.open()"
+            (mouseOver)="onMouseOver(infoWindow, gm)"
             [iconUrl]="{
               url: ms_event == m.marker.id ? '/assets/img/greencircle.png' : '/assets/img/bluecircle.png',
               scaledSize: {
@@ -77,6 +82,14 @@
               }
           }"
             >
+            <agm-info-window [disableAutoPan]="true" #infoWindow>
+
+                <div>
+                    {{m.marker.lat}}
+                    {{m.marker.lng}}
+                </div>
+    
+            </agm-info-window>
           </agm-marker>
         </agm-map>
       </div>
