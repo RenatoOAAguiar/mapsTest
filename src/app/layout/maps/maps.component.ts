@@ -308,8 +308,6 @@ export class MapsComponent implements OnInit {
       if (bounds.contains(position)){
         this.filteredImoveis.push(imovel);
       }
-
-      console.log(this.filteredImoveis);
     }
   }
 
