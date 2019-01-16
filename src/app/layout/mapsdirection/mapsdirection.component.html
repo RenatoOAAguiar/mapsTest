@@ -1,0 +1,8 @@
+<div class="form-group">
+    <input placeholder="  Qual é o seu destino?" autocorrect="on" autocapitalize="off" spellcheck="on" type="text"  #search>
+</div>
+
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-direction [origin]="origin" [destination]="destination">
+    </agm-direction>
+  </agm-map>

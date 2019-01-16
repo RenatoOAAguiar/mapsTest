@@ -15,7 +15,7 @@ import { FormComponent } from './form/form.component';
         FormsModule,
         MapsRoutingModule,
         AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyBeu0Mx6eIm0nii6bZw4ZgiipYCtPwywpE',
+            apiKey: 'AIzaSyA0lI7vFzJgmVqSs2BYdnHtwW9bOJOwrtI',
             libraries: ['geometry', 'places']
         }),
         SlideshowModule,

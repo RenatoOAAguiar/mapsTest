@@ -10,6 +10,7 @@ const routes: Routes = [
             { path: '', redirectTo: 'principal', pathMatch: 'prefix' },
             { path: 'maps', loadChildren: './maps/maps.module#MapsModule'},
             { path: 'search', loadChildren: './mapssearch/mapssearch.module#MapsSearchModule'},
+            { path: 'direction', loadChildren: './mapsdirection/mapsdirection.module#MapsDirectionModule'},
             //{ path: 'principal', loadChildren: './principal/principal.module#PrincipalModule' },
         ]
     }
